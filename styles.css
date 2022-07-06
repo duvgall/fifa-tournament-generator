@@ -1,0 +1,42 @@
+
+.team-box {
+    width: 200px;
+    height: 30px;
+    border: 2px solid black;
+    display: inline-block
+}
+
+.round-container {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.versus {
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#round-seven-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#round-six-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#round-five-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#round-four-container {
+    display: flex;
+    justify-content: center;
+}
