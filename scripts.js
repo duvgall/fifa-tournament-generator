@@ -23,16 +23,19 @@ let teams = ['Paris Saint-Germain', 'Manchester City', 'FC Bayern München','Liv
 let rand;
 let teamTextA; 
 let teamTextB;
+let winner;
+let checkbox;
 
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
     while(currentIndex != 0) {
-        randomIndex = Math.floor(Math.random) * currentIndex--;
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
         [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];                           //array is not shuffling randomly. change to fisher yates from geeksforgeeks.
+            array[randomIndex], array[currentIndex]];                           //shuffles the array before the teams are assigned to their divs
     }
+    console.log(array);
     return array;
-    
 }
 
 function create16() {
@@ -142,23 +145,11 @@ function create16() {
     teamBoxA.classList.add('team-box');
     teamBoxB.classList.add('team-box');
     versus.classList.add('versus')
-    checkboxA = document.createElement('input');
-    checkboxB = document.createElement('input');
-    checkboxA.type = "checkbox";
-    checkboxA.name = "winner";
-    checkboxA.value = "value";
-    checkboxA.id = "8[i]a";
-    checkboxB.type = "checkbox";
-    checkboxB.name = "winner";
-    checkboxB.value = "value";
-    checkboxB.id = "8[i]b";
     roundSeven.appendChild(gameBoxA);
     roundSeven.appendChild(versus);
     roundSeven.appendChild(gameBoxB);
     gameBoxA.appendChild(teamBoxA);
     gameBoxB.appendChild(teamBoxB);
-    gameBoxA.appendChild(checkboxA);
-    gameBoxB.appendChild(checkboxB);
     versus.textContent = 'v';
 
 }
@@ -166,8 +157,6 @@ function create16() {
 function create32() {
     let gameBoxA;
     let gameBoxB;
-    let checkboxA;
-    let checkboxB;
     let versus;
     
     for(let i = 0; i <= 15; i++) {
@@ -181,23 +170,11 @@ function create32() {
         teamBoxA.id = `box16${i}a`;
         teamBoxB.id = `box16${i}b`;
         versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = "16[i]a";
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = "16[i]b";
         roundThree.appendChild(gameBoxA);
         roundThree.appendChild(versus);
         roundThree.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
     }
 
@@ -211,23 +188,11 @@ function create32() {
         teamBoxA.classList.add('team-box');
         teamBoxB.classList.add('team-box');
         versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = "16[i]a";
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = "16[i]b";
         roundFour.appendChild(gameBoxA);
         roundFour.appendChild(versus);
         roundFour.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
         
     }
@@ -242,23 +207,11 @@ function create32() {
         teamBoxA.classList.add('team-box');
         teamBoxB.classList.add('team-box');
         versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = "16[i]a";
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = "16[i]b";
         roundFive.appendChild(gameBoxA);
         roundFive.appendChild(versus);
         roundFive.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
         
     }for (let i = 0; i <= 1; i++) {
@@ -271,23 +224,11 @@ function create32() {
         teamBoxA.classList.add('team-box');
         teamBoxB.classList.add('team-box');
         versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = "16[i]a";
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = "16[i]b";
         roundSix.appendChild(gameBoxA);
         roundSix.appendChild(versus);
         roundSix.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
     
     }
@@ -300,23 +241,11 @@ function create32() {
     teamBoxA.classList.add('team-box');
     teamBoxB.classList.add('team-box');
     versus.classList.add('versus')
-    checkboxA = document.createElement('input');
-    checkboxB = document.createElement('input');
-    checkboxA.type = "checkbox";
-    checkboxA.name = "winner";
-    checkboxA.value = "value";
-    checkboxA.id = "16[i]a";
-    checkboxB.type = "checkbox";
-    checkboxB.name = "winner";
-    checkboxB.value = "value";
-    checkboxB.id = "16[i]b";
     roundSeven.appendChild(gameBoxA);
     roundSeven.appendChild(versus);
     roundSeven.appendChild(gameBoxB);
     gameBoxA.appendChild(teamBoxA);
     gameBoxB.appendChild(teamBoxB);
-    gameBoxA.appendChild(checkboxA);
-    gameBoxB.appendChild(checkboxB);
     versus.textContent = 'v';
     
 }
@@ -338,24 +267,12 @@ function create64() {
         teamBoxB.classList.add('team-box');
         teamBoxA.id = `box32${i}a`;
         teamBoxB.id = `box32${i}b`;
-        versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = `32${i}a`;
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = `32${i}b`;
+        versus.classList.add('versus');
         roundTwo.appendChild(gameBoxA);
         roundTwo.appendChild(versus);
         roundTwo.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
     }
     
@@ -363,28 +280,18 @@ function create64() {
         gameBoxA = document.createElement('div');
         versus = document.createElement('p');
         gameBoxB = document.createElement('div');
-        teamBoxA = document.createElement('div');
-        teamBoxB = document.createElement('div'); 
+        teamBoxA = document.createElement('input');
+        teamBoxB = document.createElement('input'); 
+        teamBoxA.id = `box16${i}a`;
+        teamBoxB.id = `box16${i}b`;
         teamBoxA.classList.add('team-box');
         teamBoxB.classList.add('team-box');
-        versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = "16[i]a";
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = "16[i]b";
+        versus.classList.add('versus');
         roundThree.appendChild(gameBoxA);
         roundThree.appendChild(versus);
         roundThree.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
     }
 
@@ -397,24 +304,12 @@ function create64() {
         teamBoxB = document.createElement('div'); 
         teamBoxA.classList.add('team-box');
         teamBoxB.classList.add('team-box');
-        versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = "16[i]a";
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = "16[i]b";
+        versus.classList.add('versus');
         roundFour.appendChild(gameBoxA);
         roundFour.appendChild(versus);
         roundFour.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
         
     }
@@ -429,23 +324,11 @@ function create64() {
         teamBoxA.classList.add('team-box');
         teamBoxB.classList.add('team-box');
         versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = "16[i]a";
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = "16[i]b";
         roundFive.appendChild(gameBoxA);
         roundFive.appendChild(versus);
         roundFive.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
         
     }for (let i = 0; i <= 1; i++) {
@@ -458,23 +341,11 @@ function create64() {
         teamBoxA.classList.add('team-box');
         teamBoxB.classList.add('team-box');
         versus.classList.add('versus')
-        checkboxA = document.createElement('input');
-        checkboxB = document.createElement('input');
-        checkboxA.type = "checkbox";
-        checkboxA.name = "winner";
-        checkboxA.value = "value";
-        checkboxA.id = "16[i]a";
-        checkboxB.type = "checkbox";
-        checkboxB.name = "winner";
-        checkboxB.value = "value";
-        checkboxB.id = "16[i]b";
         roundSix.appendChild(gameBoxA);
         roundSix.appendChild(versus);
         roundSix.appendChild(gameBoxB);
         gameBoxA.appendChild(teamBoxA);
         gameBoxB.appendChild(teamBoxB);
-        gameBoxA.appendChild(checkboxA);
-        gameBoxB.appendChild(checkboxB);
         versus.textContent = 'v';
     
     }
@@ -486,24 +357,12 @@ function create64() {
     teamBoxB = document.createElement('div'); 
     teamBoxA.classList.add('team-box');
     teamBoxB.classList.add('team-box');
-    versus.classList.add('versus')
-    checkboxA = document.createElement('input');
-    checkboxB = document.createElement('input');
-    checkboxA.type = "checkbox";
-    checkboxA.name = "winner";
-    checkboxA.value = "value";
-    checkboxA.id = "16[i]a";
-    checkboxB.type = "checkbox";
-    checkboxB.name = "winner";
-    checkboxB.value = "value";
-    checkboxB.id = "16[i]b";
+    versus.classList.add('versus');
     roundSeven.appendChild(gameBoxA);
     roundSeven.appendChild(versus);
     roundSeven.appendChild(gameBoxB);
     gameBoxA.appendChild(teamBoxA);
     gameBoxB.appendChild(teamBoxB);
-    gameBoxA.appendChild(checkboxA);
-    gameBoxB.appendChild(checkboxB);
     versus.textContent = 'v';
 
                                                         //disable button after execution
@@ -557,3 +416,6 @@ function fill16Boxes() {
 
 
 function clearAll() {}
+
+    
+    
